@@ -3,6 +3,9 @@
 > ymkz's eslint config
 
 <p>
+  <a href="https://github.com/ymkz/eslint-config" target="_blank" rel="noopener noreferrer">
+    <img src="https://flat.badgen.net/github/checks/ymkz/eslint-config?icon=github" />
+  </a>
   <a href="https://www.npmjs.com/package/@ymkz/eslint-config" target="_blank" rel="noopener noreferrer">
     <img src="https://flat.badgen.net/npm/v/@ymkz/eslint-config?icon=npm" />
   </a>

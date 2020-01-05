@@ -1,0 +1,42 @@
+on:
+  push:
+    branches:
+      - master
+env:
+  CI: true
+  TZ: Asia/Tokyo
+  cache-prefix: apple
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+    steps:
+      - run: date
+      - run: |
+          echo "node: `node --version`"
+          echo "npm:  v`npm --version`"
+          echo "yarn: v`yarn --version`"
+      - run: echo "$GITHUB_CONTEXT"
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo "::set-output name=version::$(cat .node-version)"
+        id: node-version
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ steps.node-version.outputs.version }}
+          registry-url: https://registry.npmjs.org
+      - uses: actions/cache@v1
+        id: yarn-cache
+        with:
+          path: node_modules
+          key: ${{ env.cache-prefix }}-${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+          restore-keys: ${{ env.cache-prefix }}-${{ runner.os }}-yarn-
+      - run: yarn install --frozen-lockfile
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+      - run: npm publish
+        if: contains(github.ref, 'tags/v')
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
