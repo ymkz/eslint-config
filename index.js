@@ -1,7 +1,7 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: { ecmaFeatures: { jsx: true }, sourceType: 'module' },
-  env: { browser: true, es6: true, node: true },
+  env: { browser: true, es6: true, node: true, jest: true },
   plugins: ['@typescript-eslint', 'import', 'prettier', 'react', 'react-hooks', 'simple-import-sort', 'unicorn'],
   extends: [
     'eslint:recommended',
