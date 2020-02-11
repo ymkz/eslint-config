@@ -20,23 +20,27 @@
 ## Install
 
 ```sh
-yarn add --dev --exact eslint typescript @ymkz/eslint-config
+yarn add --dev eslint typescript babel-plugin-module-resolver @babel/core @ymkz/eslint-config
 ```
 
 ## Usage
 
 Write the following code in `.eslintrc.json`
 
-```
-{
-  "extends": ["@ymkz/eslint-config"]
-}
+```.eslintrc.yml
+extends:
+  - '@ymkz/eslint-config'
 ```
 
 ## Requirements
 
 - `eslint` >= `6.8.0`
 - `typescript` >= `3.7.4`
+
+## References
+
+- [hzdg/linter-configs: A repository of config files for all the linters we use](https://github.com/hzdg/linter-configs)
+- [conten2/eslint-config: ESLint sharable config for Project conten2](https://github.com/conten2/eslint-config)
 
 ## Author
 
