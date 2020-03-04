@@ -14,7 +14,9 @@
   "version": "1.2.0",
   "main": "index.js",
   "files": [
-    "index.js"
+    "import.js",
+    "react.js",
+    "typescript.js"
   ],
   "scripts": {
     "lint": "eslint index.js",
@@ -34,7 +36,7 @@
   },
   "peerDependencies": {
     "eslint": ">=6.8.0",
-    "typescript": ">=3.7.4"
+    "prettier": ">=1.19.0"
   },
   "devDependencies": {
     "@babel/core": "7.8.6",
