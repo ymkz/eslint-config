@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/ymkz/eslint-config/compare/v1.2.0...v1.3.0) (2020-03-04)
+
+
+### Features
+
+* split config for usability ([e90cc67](https://github.com/ymkz/eslint-config/commit/e90cc678e449640298bab7457830bd513846d305))
+
 # [1.2.0](https://github.com/ymkz/eslint-config/compare/v1.1.0...v1.2.0) (2020-02-06)
 
 
