@@ -13,6 +13,6 @@ module.exports = {
     'simple-import-sort/sort': 'error',
   },
   settings: {
-    'import/resolver': { 'babel-module': {} },
+    'import/resolver': { typescript: {} },
   },
 }
