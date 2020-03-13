@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/ymkz/eslint-config/compare/v1.3.0...v1.4.0) (2020-03-13)
+
+
+### Features
+
+* change import resolver to typescript from babel-module ([c1de6c4](https://github.com/ymkz/eslint-config/commit/c1de6c48a3061623ed1d0fe1b4db7048e0511db3))
+
 # [1.3.0](https://github.com/ymkz/eslint-config/compare/v1.2.0...v1.3.0) (2020-03-04)
 
 
