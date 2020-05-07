@@ -7,6 +7,7 @@ module.exports = {
     'prettier/@typescript-eslint',
   ],
   rules: {
+    '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     '@typescript-eslint/explicit-function-return-type': 'off',
   },

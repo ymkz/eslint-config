@@ -6,6 +6,7 @@ module.exports = {
   rules: {
     'prefer-const': 'error',
     'unicorn/consistent-function-scoping': 'off',
+    'unicorn/no-abusive-eslint-disable': 'off',
     'unicorn/prevent-abbreviations': 'off',
   },
 }
