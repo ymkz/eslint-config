@@ -4,16 +4,13 @@
 
 <p>
   <a href="https://github.com/ymkz/eslint-config" target="_blank" rel="noopener noreferrer">
-    <img src="https://flat.badgen.net/github/checks/ymkz/eslint-config?icon=github" />
+    <img src="https://img.shields.io/github/workflow/status/ymkz/eslint-config/release-master/master?label=master&style=for-the-badge" />
   </a>
   <a href="https://www.npmjs.com/package/@ymkz/eslint-config" target="_blank" rel="noopener noreferrer">
-    <img src="https://flat.badgen.net/npm/v/@ymkz/eslint-config?icon=npm" />
+    <img src="https://img.shields.io/npm/v/@ymkz/eslint-config?style=for-the-badge" />
   </a>
   <a href="https://www.npmjs.com/package/@ymkz/eslint-config" target="_blank" rel="noopener noreferrer">
-    <img src="https://flat.badgen.net/npm/license/@ymkz/eslint-config?icon=npm" />
-  </a>
-  <a href="https://twitter.com/ymkzly" target="_blank" rel="noopener noreferrer">
-    <img src="https://flat.badgen.net/twitter/follow/ymkzly?icon=twitter" />
+    <img src="https://img.shields.io/npm/l/@ymkz/eslint-config?style=for-the-badge" />
   </a>
 </p>
 
@@ -33,13 +30,10 @@ extends:
   - '@ymkz/eslint-config'
   - '@ymkz/eslint-config/react'
   - '@ymkz/eslint-config/import'
-  - '@ymkz/eslint-config/typescript'
+overrides:
+  - files: '*.ts'
+    extends: '@ymkz/eslint-config/typescript'
 ```
-
-## Requirements
-
-- `eslint` >= `6.8.0`
-- `prettier` >= `1.19.0`
 
 ## References
 
