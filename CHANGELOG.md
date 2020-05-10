@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/ymkz/eslint-config/compare/v1.4.0...v1.5.0) (2020-05-10)
+
+
+### Features
+
+* update some lint settings ([64d1b49](https://github.com/ymkz/eslint-config/commit/64d1b497c3d403cf2e02fc39462efe7fabdb5510))
+
 # [1.4.0](https://github.com/ymkz/eslint-config/compare/v1.3.0...v1.4.0) (2020-03-13)
 
 
