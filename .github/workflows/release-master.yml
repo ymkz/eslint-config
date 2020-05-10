@@ -1,3 +1,4 @@
+name: release-master
 on:
   push:
     branches:
@@ -5,7 +6,6 @@ on:
 env:
   CI: true
   TZ: Asia/Tokyo
-  CACHE: apple
 jobs:
   dump:
     runs-on: ubuntu-latest
@@ -17,7 +17,6 @@ jobs:
       - run: |
           echo "CI: ${CI}"
           echo "TZ: ${TZ}"
-          echo "CACHE: ${CACHE}"
       - run: date
       - run: echo "${GITHUB_CONTEXT}"
         env:
@@ -26,20 +25,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: echo "::set-output name=version::$(cat .node-version)"
-        id: node-version
       - uses: actions/setup-node@v1
         with:
-          node-version: ${{ steps.node-version.outputs.version }}
-      - uses: actions/cache@v1
-        id: yarn-cache
+          node-version: '12'
+      - uses: bahmutov/npm-install@v1
+      - uses: cycjimmy/semantic-release-action@v2
         with:
-          path: node_modules
-          key: ${{ env.CACHE }}-${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
-          restore-keys: ${{ env.CACHE }}-${{ runner.os }}-yarn-
-      - run: yarn install --frozen-lockfile
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
-      - run: yarn run release
+          semantic_version: '17.0.7'
+          extra_plugins: |
+            @semantic-release/changelog@5.0.1
+            @semantic-release/git@9.0.0
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
