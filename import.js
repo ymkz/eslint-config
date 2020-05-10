@@ -2,7 +2,6 @@ module.exports = {
   plugins: ['import', 'simple-import-sort'],
   extends: ['plugin:import/errors', 'plugin:import/warnings', 'plugin:import/typescript'],
   rules: {
-    'prefer-const': 'error',
     'sort-imports': 'off',
     'import/default': 'off',
     'import/named': 'off',

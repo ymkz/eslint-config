@@ -4,7 +4,6 @@ module.exports = {
   plugins: ['prettier', 'unicorn'],
   extends: ['eslint:recommended', 'plugin:unicorn/recommended', 'plugin:prettier/recommended', 'prettier/unicorn'],
   rules: {
-    'prefer-const': 'error',
     'unicorn/consistent-function-scoping': 'off',
     'unicorn/no-abusive-eslint-disable': 'off',
     'unicorn/prevent-abbreviations': 'off',

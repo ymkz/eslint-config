@@ -12,6 +12,6 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
   },
   settings: {
-    'import/parsers': { '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'] },
+    'import/parsers': { '@typescript-eslint/parser': ['.ts', '.tsx'] },
   },
 }
