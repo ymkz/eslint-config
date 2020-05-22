@@ -31,7 +31,7 @@ extends:
   - '@ymkz/eslint-config/react'
   - '@ymkz/eslint-config/import'
 overrides:
-  - files: '*.ts'
+  - files: '*.{ts,tsx}'
     extends: '@ymkz/eslint-config/typescript'
 ```
 
