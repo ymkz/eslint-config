@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/ymkz/eslint-config/compare/v1.5.0...v1.6.0) (2020-05-24)
+
+
+### Features
+
+* **deps:** update dependency eslint to v7.1.0 ([856c77b](https://github.com/ymkz/eslint-config/commit/856c77b3cd227434a78663fbdee00e2113fac86f))
+
 # [1.5.0](https://github.com/ymkz/eslint-config/compare/v1.4.0...v1.5.0) (2020-05-10)
 
 
