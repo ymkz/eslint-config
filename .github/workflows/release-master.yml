@@ -18,7 +18,6 @@ jobs:
           echo "CI: ${CI}"
           echo "TZ: ${TZ}"
       - run: date
-      - uses: hmarr/debug-action
   publish:
     runs-on: ubuntu-latest
     steps:
