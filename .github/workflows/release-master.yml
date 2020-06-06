@@ -18,9 +18,7 @@ jobs:
           echo "CI: ${CI}"
           echo "TZ: ${TZ}"
       - run: date
-      - run: echo "${GITHUB_CONTEXT}"
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
+      - users: hmarr/debug-action
   publish:
     runs-on: ubuntu-latest
     steps:

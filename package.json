@@ -1,17 +1,22 @@
 {
   "name": "@ymkz/eslint-config",
+  "version": "1.6.0",
   "description": "ymkz's eslint config",
-  "license": "MIT",
-  "author": "ymkz <ymkzly@gmail.com> (https://github.com/ymkz)",
+  "keywords": [
+    "config",
+    "eslint",
+    "ymkz"
+  ],
   "homepage": "https://github.com/ymkz/eslint-config",
+  "bugs": {
+    "url": "https://github.com/ymkz/eslint-config/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ymkz/eslint-config"
   },
-  "bugs": {
-    "url": "https://github.com/ymkz/eslint-config/issues"
-  },
-  "version": "1.6.0",
+  "license": "MIT",
+  "author": "ymkz <ymkzly@gmail.com> (https://github.com/ymkz)",
   "main": "index.js",
   "files": [
     "import.js",
@@ -19,11 +24,32 @@
     "typescript.js"
   ],
   "scripts": {
-    "lint": "eslint index.js"
+    "format": "prettier --write .",
+    "lint": "prettier --check ."
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "post-checkout": "yarnhook",
+      "post-merge": "yarnhook",
+      "post-rewrite": "yarnhook"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{md,js,yml,json}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": "@ymkz/prettier-config",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.0.0",
-    "@typescript-eslint/parser": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "3.0.0",
+    "@typescript-eslint/parser": "3.0.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-import-resolver-typescript": "2.0.0",
     "eslint-plugin-import": "2.20.2",
@@ -31,30 +57,23 @@
     "eslint-plugin-react": "7.20.0",
     "eslint-plugin-react-hooks": "4.0.4",
     "eslint-plugin-simple-import-sort": "5.0.3",
-    "eslint-plugin-unicorn": "^20.0.0"
-  },
-  "peerDependencies": {
-    "eslint": ">=6.8.0",
-    "prettier": ">=1.19.0"
+    "eslint-plugin-unicorn": "20.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "8.3.5",
     "@commitlint/config-conventional": "8.3.4",
     "@ymkz/prettier-config": "1.2.0",
-    "eslint": "^7.1.0",
     "husky": "4.2.5",
-    "lint-staged": "^10.2.6",
+    "lint-staged": "10.2.6",
     "prettier": "2.0.5",
-    "prettier-package-json": "2.1.3",
+    "prettier-plugin-packagejson": "2.2.5",
     "react": "16.13.1",
     "typescript": "3.9.5",
     "yarnhook": "0.4.3"
   },
-  "keywords": [
-    "config",
-    "eslint",
-    "ymkz"
-  ],
+  "peerDependencies": {
+    "prettier": ">=2"
+  },
   "publishConfig": {
     "access": "public"
   }
