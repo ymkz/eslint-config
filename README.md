@@ -17,7 +17,7 @@
 ## Install
 
 ```sh
-yarn add --dev @ymkz/eslint-config
+npm i -D @ymkz/eslint-config
 ```
 
 ## Usage
