@@ -48,7 +48,7 @@
   },
   "prettier": "@ymkz/prettier-config",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "3.3.0",
+    "@typescript-eslint/eslint-plugin": "3.6.0",
     "@typescript-eslint/parser": "3.3.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-import-resolver-typescript": "2.0.0",
